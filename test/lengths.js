@@ -17,6 +17,14 @@ tests['ft-us to ft'] = function () {
   assert.strictEqual( convert(1).from('ft-us').to('ft') , 1.000002);
 };
 
+tests['ft to us-ft'] = function () {
+  assert.strictEqual( convert(1).from('ft').to('us-ft') , 0.999998000004);
+};
+
+tests['us-ft to ft'] = function () {
+  assert.strictEqual( convert(1).from('us-ft').to('ft') , 1.000002);
+};
+
 tests['in to in'] = function () {
   assert.strictEqual( convert(7).from('in').to('in') , 7);
 };
