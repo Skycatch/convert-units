@@ -17,14 +17,6 @@ tests['ft-us to ft'] = function () {
   assert.strictEqual( convert(1).from('ft-us').to('ft') , 1.000002);
 };
 
-tests['ft to us-ft'] = function () {
-  assert.strictEqual( convert(1).from('ft').to('us-ft') , 0.999998000004);
-};
-
-tests['us-ft to ft'] = function () {
-  assert.strictEqual( convert(1).from('us-ft').to('ft') , 1.000002);
-};
-
 tests['in to in'] = function () {
   assert.strictEqual( convert(7).from('in').to('in') , 7);
 };
@@ -43,6 +35,10 @@ tests['ft to mi'] = function () {
 
 tests['mi to ft'] = function () {
   assert.strictEqual( convert(1).from('mi').to('ft') , 5280);
+};
+
+tests['nMi to mi'] = function () {
+  assert.strictEqual( convert(1).from('nMi').to('mi') , 1.150780303030303);
 };
 
 tests['m to m'] = function () {
@@ -84,6 +80,27 @@ tests['m to ft-us'] = function () {
 tests['mm to ft'] = function () {
   var expected = 0.00328084
     , actual = convert(1).from('mm').to('ft');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['nMi to m'] = function () {
+  var expected = 1852
+    , actual = convert(1).from('nMi').to('m');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['km to nMi'] = function () {
+  var expected = 0.539956803
+    , actual = convert(1).from('km').to('nMi');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
+tests['fathm to m'] = function () {
+  var expected = 1.8288
+    , actual = convert(1).from('fathom').to('m');
   assert.ok( percentError(expected, actual) < ACCURACY
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
