@@ -1,5 +1,5 @@
 {
-  "name": "@skycatch/convert-units",
+  "name": "convert-units",
   "version": "2.3.5",
   "description": "Convert between quantities in different units",
   "main": "lib",
