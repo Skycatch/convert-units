@@ -77,6 +77,14 @@ tests['m to ft-us'] = function () {
     , 'Expected: ' + expected +', Actual: ' + actual);
 };
 
+// When converting between systems, expect < 0.1% error
+tests['m to us-ft'] = function () {
+  var expected = 3.28084
+    , actual = convert(1).from('m').to('us-ft');
+  assert.ok( percentError(expected, actual) < ACCURACY
+    , 'Expected: ' + expected +', Actual: ' + actual);
+};
+
 tests['mm to ft'] = function () {
   var expected = 0.00328084
     , actual = convert(1).from('mm').to('ft');
