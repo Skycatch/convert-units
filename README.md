@@ -81,7 +81,7 @@ convert().possibilities('mass')
 You can also get the all the available units:
 ```js
 convert().possibilities()
-// [ 'mm', 'cm', 'm', 'in', 'ft-us', 'ft', 'mi', 'mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't', 'ml', 'l', 'tsp', 'Tbs', 'fl-oz', 'cup', 'pnt', 'qt', 'gal', 'ea', 'dz' ];
+// [ 'mm', 'cm', 'm', 'in', 'ft-us', 'us-ft', 'ft', 'mi', 'mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't', 'ml', 'l', 'tsp', 'Tbs', 'fl-oz', 'cup', 'pnt', 'qt', 'gal', 'ea', 'dz' ];
 ```
 
 To get a detailed description of a unit, use `describe`
@@ -136,7 +136,7 @@ Supported Units
 * cm
 * m
 * in
-* ft-us
+* ft-us (us-ft)
 * ft
 * fathom
 * mi
