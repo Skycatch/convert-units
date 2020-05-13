@@ -18,7 +18,7 @@ tests['kg possibilities'] = function () {
 
 tests['m possibilities'] = function () {
   var actual = convert().from('m').possibilities()
-    , expected = [ 'mm', 'cm', 'm', 'km', 'in', 'yd', 'ft-us', 'us-ft', 'ft', 'fathom', 'mi', 'nMi' ];
+    , expected = [ 'mm', 'cm', 'm', 'km', 'in', 'yd', 'ft-us', 'us-ft', 'ft', 'fathom', 'mi', 'nMi', 'us-in', 'in-us' ];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -48,7 +48,7 @@ tests['volume flow rate possibilities'] = function () {
 
 tests['length possibilities'] = function () {
   var actual = convert().possibilities('length')
-    , expected = [ 'mm', 'cm', 'm', 'km', 'in', 'yd', 'ft-us', 'us-ft', 'ft', 'fathom', 'mi', 'nMi' ];
+    , expected = [ 'mm', 'cm', 'm', 'km', 'in', 'yd', 'ft-us', 'us-ft', 'ft', 'fathom', 'mi', 'nMi', 'us-in', 'in-us' ];
   assert.deepEqual(actual.sort(), expected.sort());
 };
 
@@ -374,6 +374,8 @@ tests['all possibilities'] = function () {
       , 'yd3/s'
       , 'year'
       , 'μC'
+      , 'us-in'
+      , 'in-us'
   ];
 
   try {
