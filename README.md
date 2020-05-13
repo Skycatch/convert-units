@@ -141,6 +141,7 @@ Supported Units
 * fathom
 * mi
 * nMi
+* in-us (us-in)
 
 ### Area
 * mm2
